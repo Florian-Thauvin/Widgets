@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextView } from './widgets/input/text/TextView';
-import { toUpperCase } from 'widgets/input/text/TextUtils';
+import { toUpperCase } from './widgets/input/text/TextUtils';
 
 export function Demo() {
     return <TextViewDemo />;
