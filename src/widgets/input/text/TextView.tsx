@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formatter, IInputWidgetProps, WidgetType } from '../../../common/model/WidgetDefinition';
-import { IStringConstraint } from 'common/model/ConstraintDefinition';
+import { IStringConstraint } from '../../../common/model/ConstraintDefinition';
 import './TextStyle.css';
 
 /**
@@ -27,10 +27,10 @@ export const TextView: WidgetType<ITextViewProps> = (props: ITextViewProps): JSX
     const { isEnabled, id, constraints, label, value, setValue } = props;
 
     // The formatter used, nothing by default
-    const format: Formatter<string> = props.autoFormat ? props.autoFormat : (value: string): string => value;
+    const format: Formatter<string> = props.autoFormat ? props.autoFormat : (editValue: string): string => editValue;
     // Method called on each edit
-    const onEdit = (value: string): void => {
-        const formattedValue = format(value);
+    const onEdit = (editValue: string): void => {
+        const formattedValue = format(editValue);
         console.log(formattedValue);
         setValue(formattedValue);
     };
