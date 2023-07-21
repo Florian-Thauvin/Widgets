@@ -48,3 +48,7 @@ export type WidgetType<T extends IWidgetProps> = (props: T) => JSX.Element;
  * An input formatting function
  */
 export type Formatter<T> = (value: T) => T;
+
+//export type PrimitivesType = string | number | boolean | Date | bigint | null | undefined;
+//export type DataType = { [key: string]: PrimitivesType | DataType | Array<PrimitivesType> | Array<DataType> };
+export type DataType = Record<string, any>;
